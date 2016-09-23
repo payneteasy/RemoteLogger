@@ -34,7 +34,7 @@
 
 - (uint64_t)fileLength {
     NSError * error;
-    NSDictionary<NSFileAttributeKey, id> *attributes = [_manager attributesOfItemAtPath:_path error:&error];
+    NSDictionary *attributes = [_manager attributesOfItemAtPath:_path error:&error];
     if(error) {
         NSLog(@"Couldn't get file size %@", _path);
         return 0;

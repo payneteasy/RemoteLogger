@@ -46,7 +46,7 @@
 
     {
         NSError * error;
-        NSDictionary<NSFileAttributeKey, id> *attributes = [_fileManager attributesOfItemAtPath:file.currentFilePath error:&error];
+        NSDictionary *attributes = [_fileManager attributesOfItemAtPath:file.currentFilePath error:&error];
         XCTAssertEqual(5, attributes.fileSize);
 
         NSData * data = [[NSData alloc] initWithContentsOfFile:file.currentFilePath];
@@ -58,7 +58,7 @@
 
     {
         NSError * error;
-        NSDictionary<NSFileAttributeKey, id> *attributes = [_fileManager attributesOfItemAtPath:file.currentFilePath error:&error];
+        NSDictionary *attributes = [_fileManager attributesOfItemAtPath:file.currentFilePath error:&error];
         XCTAssertEqual(10, attributes.fileSize);
 
         NSData * data = [[NSData alloc] initWithContentsOfFile:file.currentFilePath];
@@ -73,7 +73,7 @@
     [file write:bytes5];
 
     NSError * error;
-    NSDictionary<NSFileAttributeKey, id> *attributes = [_fileManager attributesOfItemAtPath:file.currentFilePath error:&error];
+    NSDictionary *attributes = [_fileManager attributesOfItemAtPath:file.currentFilePath error:&error];
     XCTAssertNil(error);
     XCTAssertEqual(5, attributes.fileSize);
     XCTAssertFalse(file.isLarge);
@@ -102,7 +102,7 @@
 
     {
         NSError * error;
-        NSDictionary<NSFileAttributeKey, id> *attributes = [_fileManager attributesOfItemAtPath:filenameLog error:&error];
+        NSDictionary *attributes = [_fileManager attributesOfItemAtPath:filenameLog error:&error];
         XCTAssertEqual(5, attributes.fileSize);
 
         NSData * data = [[NSData alloc] initWithContentsOfFile:filenameLog];

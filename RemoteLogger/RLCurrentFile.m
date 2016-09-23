@@ -29,7 +29,7 @@
 
 - (BOOL)isLarge {
     NSError * error;
-    NSDictionary<NSFileAttributeKey, id> *attributes = [_fileManager attributesOfItemAtPath:_activeFile.path error:&error];
+    NSDictionary *attributes = [_fileManager attributesOfItemAtPath:_activeFile.path error:&error];
     if(error) {
         NSLog(@"Couldn't get file attributes for file %@, error is %@", _activeFile, error);
         return YES;

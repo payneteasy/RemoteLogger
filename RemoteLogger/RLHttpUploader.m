@@ -98,7 +98,7 @@
 
 - (NSString *)getFileSize:(NSString *)filepath {
     NSError * error;
-    NSDictionary<NSFileAttributeKey, id> *attributes = [_fileManager attributesOfItemAtPath:filepath error:&error];
+    NSDictionary *attributes = [_fileManager attributesOfItemAtPath:filepath error:&error];
     if(error) {
         return @"0";
     }
