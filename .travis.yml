@@ -7,5 +7,10 @@ before_install:
 
 script:
   - open -b com.apple.iphonesimulator
-  - set -o pipefail && env NSUnbufferedIO=YES xcodebuild test -project RemoteLogger.xcodeproj -scheme RemoteLogger -sdk iphonesimulator -destination "platform=iOS Simulator,name=iPhone 6s,OS=9.3"
+  - set -o pipefail && env NSUnbufferedIO=YES
+    xcodebuild test
+    -project RemoteLogger.xcodeproj
+    -scheme RemoteLogger
+    -sdk iphonesimulator
+    -destination "platform=iOS Simulator,name=iPhone 6s"
   - pod lib lint
