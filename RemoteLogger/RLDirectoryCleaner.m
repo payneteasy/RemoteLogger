@@ -62,7 +62,7 @@
     NSError * error;
     NSArray<NSString *> *files = [_fileManager contentsOfDirectoryAtPath:_directoryPath error:&error ];
     if(error) {
-        NSLog(@"Could not get list of directory %@, error is %@", _directoryPath, error);
+        NSLog(@"RL-ERROR Could not get list of directory %@, error is %@", _directoryPath, error);
     } else {
         NSArray<NSString *> *currentFiles = [files filteredArrayUsingPredicate:_predicate];
         for(NSString * filename in currentFiles) {

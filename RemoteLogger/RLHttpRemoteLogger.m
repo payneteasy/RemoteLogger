@@ -27,6 +27,7 @@
 
 - (instancetype)initWithDirectory:(NSString *)aDirectory
                         uploadUrl:(NSString *)aUploadUrl
+                      accessToken:(NSString *)aAccessToken
                  memoryBufferSize:(uint32_t)aMemoryBufferSize
                          fileSize:(uint64_t)aFileSize
                        loggerName:(NSString *)aLoggerName
@@ -43,10 +44,12 @@
 
         _memoryBuffer = [[RLMemoryBuffer alloc] init:aMemoryBufferSize];
         _currentFile  = [[RLCurrentFile alloc] initWithDirectory:directoryUrl maxFileSize:aFileSize];
-        _httpUploader = [[RLHttpUploader alloc] initWithUrl:aDirectory directory:aDirectory directoryCleaner:cleaner];
         _fileQueue    = dispatch_queue_create([@"io.pne.queue.file."   stringByAppendingString:aLoggerName].UTF8String, DISPATCH_QUEUE_SERIAL);
         _uploadQueue  = dispatch_queue_create([@"io.pne.queue.upload." stringByAppendingString:aLoggerName].UTF8String, DISPATCH_QUEUE_SERIAL);
-        _httpUploader = [[RLHttpUploader alloc] initWithUrl:aUploadUrl directory:aDirectory directoryCleaner:cleaner];
+        _httpUploader = [[RLHttpUploader alloc] initWithUrl:aUploadUrl
+                                                accessToken:aAccessToken
+                                                  directory:aDirectory
+                                           directoryCleaner:cleaner];
     }
 
     return self;
@@ -77,18 +80,18 @@
 }
 
 - (void)mark {
-    NSLog(@"Mark");
+    NSLog(@"RL-INFO Mark");
 
     __weak RLHttpRemoteLogger * wself = self;
     dispatch_async(_fileQueue, ^{
-        NSLog(@"Clear to file");
+        NSLog(@"RL-INFO Clear to file");
 
         [wself.memoryBuffer clearToFile:wself.currentFile];
         [wself.currentFile closeAndCreateNew];
 
         dispatch_async(wself.uploadQueue, ^{
             [wself.httpUploader removeOldFiles];
-            NSLog(@"Uploading files ...");
+            NSLog(@"RL-INFO Uploading files ...");
             [wself.httpUploader uploadFiles];
         });
     });

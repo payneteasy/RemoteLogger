@@ -13,6 +13,7 @@
 
 - (instancetype)initWithDirectory:(NSString *)aDirectory
                         uploadUrl:(NSString *)aUploadUrl
+                      accessToken:(NSString *)aAccessToken
                  memoryBufferSize:(uint32_t)aMemoryBufferSize
                          fileSize:(uint64_t)aFileSize
                        loggerName:(NSString *)aLoggerName

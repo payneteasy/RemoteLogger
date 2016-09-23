@@ -13,6 +13,7 @@
 @interface RLHttpUploader : NSObject
 
 - (instancetype)initWithUrl:(NSString *)aUrl
+                accessToken:(NSString *)aAccessToken
                   directory:(NSString *)aDirectory
            directoryCleaner:(RLDirectoryCleaner *)aDirectoryCleaner
 ;

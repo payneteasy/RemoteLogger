@@ -20,7 +20,8 @@
     RLDirectoryCleaner * _directoryCleaner;
 }
 
-- (instancetype)initWithUrl:(NSString *)aUrl 
+- (instancetype)initWithUrl:(NSString *)aUrl
+                accessToken:(NSString *)aAccessToken
                   directory:(NSString *)aDirectory
            directoryCleaner:(RLDirectoryCleaner *)aDirectoryCleaner
 {
@@ -30,6 +31,7 @@
         _uploadUrl        = [[NSURL alloc] initWithString:[NSString stringWithFormat:@"%@/%@", aUrl, _deviceId]];
         _fileManager      = [NSFileManager defaultManager];
         _directoryCleaner = aDirectoryCleaner;
+        _bearer           = [NSString stringWithFormat:@"Bearer %@", aAccessToken];
     }
 
     return self;
@@ -54,7 +56,7 @@
     NSHTTPURLResponse * response;
     NSError           * error;
 
-    NSLog(@"Sending %@ to %@", aFilepath, _uploadUrl);
+    NSLog(@"RL-INFO Sending %@ to %@", aFilepath.lastPathComponent, _uploadUrl);
 
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wdeprecated-declarations"
@@ -64,12 +66,12 @@
 #pragma clang diagnostic pop
 
     if(error) {
-        NSLog(@"Couldn't send %@ to %@ error is %@", aFilepath, _uploadUrl, error);
+        NSLog(@"RL-ERROR Couldn't send %@ to %@ error is %@", aFilepath, _uploadUrl, error);
         return;
     }
 
     if(response.statusCode != 200) {
-        NSLog(@"Couldn't send %@ \nto %@ \nresponse is %@ %@", aFilepath, _uploadUrl, @(response.statusCode), [NSHTTPURLResponse localizedStringForStatusCode:response.statusCode]);
+        NSLog(@"RL-ERROR Couldn't send %@ \nto %@ \nresponse is %@ %@", aFilepath, _uploadUrl, @(response.statusCode), [NSHTTPURLResponse localizedStringForStatusCode:response.statusCode]);
         return;
     }
 

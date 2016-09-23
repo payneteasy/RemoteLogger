@@ -24,11 +24,11 @@
 }
 
 -(void) deleteFile {
-    NSLog(@"Deleting file: %@", _path);
+    NSLog(@"RL-INFO Deleting file: %@", _path.lastPathComponent);
     NSError * error;
     [_manager removeItemAtPath:_path error:&error];
     if(error){
-        NSLog(@"Couldn't remote file %@, error is %@", _path, error);
+        NSLog(@"RL-ERROR Couldn't remote file %@, error is %@", _path, error);
     }
 }
 
@@ -36,7 +36,7 @@
     NSError * error;
     NSDictionary *attributes = [_manager attributesOfItemAtPath:_path error:&error];
     if(error) {
-        NSLog(@"Couldn't get file size %@", _path);
+        NSLog(@"RL-ERROR Couldn't get file size %@", _path);
         return 0;
     }
     return attributes.fileSize;

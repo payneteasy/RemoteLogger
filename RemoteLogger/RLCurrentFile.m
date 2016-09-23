@@ -31,7 +31,7 @@
     NSError * error;
     NSDictionary *attributes = [_fileManager attributesOfItemAtPath:_activeFile.path error:&error];
     if(error) {
-        NSLog(@"Couldn't get file attributes for file %@, error is %@", _activeFile, error);
+        NSLog(@"RL-ERROR Couldn't get file attributes for file %@, error is %@", _activeFile, error);
         return YES;
     }
     return attributes.fileSize > _maxFileSize;
@@ -47,7 +47,7 @@
     NSError * error;
     NSArray<NSString *> *files = [_fileManager contentsOfDirectoryAtPath:_directory.path error:&error ];
     if(error) {
-        NSLog(@"Could not get list of directory %@, error is %@", _directory, error);
+        NSLog(@"RL-ERROR Could not get list of directory %@, error is %@", _directory, error);
     } else {
         NSArray<NSString *> *currentFiles = [files filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"self ENDSWITH '-current'"]];
         for(NSString * filename in currentFiles) {
@@ -62,7 +62,7 @@
     NSError *error;
     [_fileManager moveItemAtPath:path toPath:newPath error:&error];
     if(error) {
-            NSLog(@"Couldn't rename file %@ to %@ : %@", path, newPath, error);
+            NSLog(@"RL-ERROR Couldn't rename file %@ to %@ : %@", path, newPath, error);
         }
 }
 
@@ -77,7 +77,7 @@
         NSError * error;
         NSFileHandle * handle = [NSFileHandle fileHandleForWritingToURL:_activeFile error:&error];
         if(error) {
-            NSLog(@"Could not create file handle for file %@", _activeFile);
+            NSLog(@"RL-ERROR Could not create file handle for file %@", _activeFile);
             return;
         }
 
@@ -86,7 +86,7 @@
             [handle writeData:aData];
         }
         @catch (NSException *exception) {
-            NSLog(@"Exception occurred: %@, %@", exception, [exception userInfo]);
+            NSLog(@"RL-ERROR Exception occurred: %@, %@", exception, [exception userInfo]);
         }
         @finally {
             [handle closeFile];
@@ -95,7 +95,7 @@
         NSError * error;
         [aData writeToURL:_activeFile options:NSDataWritingWithoutOverwriting error:&error];
         if(error) {
-            NSLog(@"Couldn't write to file %@, error is %@", _activeFile, error);
+            NSLog(@"RL-ERROR Couldn't write to file %@, error is %@", _activeFile, error);
         }
     }
 

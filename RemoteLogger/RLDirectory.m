@@ -33,7 +33,7 @@
         NSError * error;
         [_fileManager createDirectoryAtPath:path withIntermediateDirectories:NO attributes:nil error:&error];
         if(error){
-            NSLog(@"Could not create directory: %@", path);
+            NSLog(@"RL-ERROR Could not create directory: %@", path);
         }
     }
 }
