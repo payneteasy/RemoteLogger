@@ -7,6 +7,6 @@ script:
     -project RemoteLogger.xcodeproj
     -scheme RemoteLogger
     -sdk iphonesimulator9.3
-    -destination 'platform=iOS Simulator,name=iPhone 6,OS=9.3'
+    -destination "iOS Simulator,name=iPhone 6s"
     ONLY_ACTIVE_ARCH=NO | xcpretty
 - pod lib lint
