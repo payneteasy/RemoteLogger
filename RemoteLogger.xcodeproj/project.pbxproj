@@ -10,24 +10,25 @@
 		8A4907F31D92EBF300B56998 /* RemoteLogger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A4907E91D92EBF300B56998 /* RemoteLogger.framework */; };
 		8A4907F81D92EBF300B56998 /* RemoteLoggerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A4907F71D92EBF300B56998 /* RemoteLoggerTests.m */; };
 		8A4907FA1D92EBF300B56998 /* RemoteLogger.h in Headers */ = {isa = PBXBuildFile; fileRef = 8A4907EC1D92EBF300B56998 /* RemoteLogger.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8AC871A51D92F3A800CB5288 /* RLHttpRemoteLogger.h in Headers */ = {isa = PBXBuildFile; fileRef = 8AC871A31D92F3A800CB5288 /* RLHttpRemoteLogger.h */; };
+		8A97D51F1D95D7430001B3EA /* RLIRemoteLogger.h in Headers */ = {isa = PBXBuildFile; fileRef = 8AC871A21D92F26500CB5288 /* RLIRemoteLogger.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8AC871A51D92F3A800CB5288 /* RLHttpRemoteLogger.h in Headers */ = {isa = PBXBuildFile; fileRef = 8AC871A31D92F3A800CB5288 /* RLHttpRemoteLogger.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8AC871A61D92F3A800CB5288 /* RLHttpRemoteLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AC871A41D92F3A800CB5288 /* RLHttpRemoteLogger.m */; };
-		8AC871A91D92F43600CB5288 /* RLMemoryBuffer.h in Headers */ = {isa = PBXBuildFile; fileRef = 8AC871A71D92F43600CB5288 /* RLMemoryBuffer.h */; };
+		8AC871A91D92F43600CB5288 /* RLMemoryBuffer.h in Headers */ = {isa = PBXBuildFile; fileRef = 8AC871A71D92F43600CB5288 /* RLMemoryBuffer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8AC871AA1D92F43600CB5288 /* RLMemoryBuffer.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AC871A81D92F43600CB5288 /* RLMemoryBuffer.m */; };
 		8AC871AE1D92F73700CB5288 /* RLMemoryBufferTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AC871AD1D92F73700CB5288 /* RLMemoryBufferTests.m */; };
-		8AC871B11D92FCA500CB5288 /* RLCurrentFile.h in Headers */ = {isa = PBXBuildFile; fileRef = 8AC871AF1D92FCA500CB5288 /* RLCurrentFile.h */; };
+		8AC871B11D92FCA500CB5288 /* RLCurrentFile.h in Headers */ = {isa = PBXBuildFile; fileRef = 8AC871AF1D92FCA500CB5288 /* RLCurrentFile.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8AC871B21D92FCA500CB5288 /* RLCurrentFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AC871B01D92FCA500CB5288 /* RLCurrentFile.m */; };
 		8AC871B41D9435F100CB5288 /* RLCurrentFileTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AC871B31D9435F100CB5288 /* RLCurrentFileTest.m */; };
-		8AC871B71D95243800CB5288 /* RLHttpUploader.h in Headers */ = {isa = PBXBuildFile; fileRef = 8AC871B51D95243800CB5288 /* RLHttpUploader.h */; };
+		8AC871B71D95243800CB5288 /* RLHttpUploader.h in Headers */ = {isa = PBXBuildFile; fileRef = 8AC871B51D95243800CB5288 /* RLHttpUploader.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8AC871B81D95243800CB5288 /* RLHttpUploader.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AC871B61D95243800CB5288 /* RLHttpUploader.m */; };
 		8AC871BA1D9568B900CB5288 /* RLHttpUploaderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AC871B91D9568B900CB5288 /* RLHttpUploaderTests.m */; };
-		8AC871BD1D956DD900CB5288 /* RLDirectoryCleaner.h in Headers */ = {isa = PBXBuildFile; fileRef = 8AC871BB1D956DD900CB5288 /* RLDirectoryCleaner.h */; };
+		8AC871BD1D956DD900CB5288 /* RLDirectoryCleaner.h in Headers */ = {isa = PBXBuildFile; fileRef = 8AC871BB1D956DD900CB5288 /* RLDirectoryCleaner.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8AC871BE1D956DD900CB5288 /* RLDirectoryCleaner.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AC871BC1D956DD900CB5288 /* RLDirectoryCleaner.m */; };
-		8AC871C11D957A5400CB5288 /* RLFile.h in Headers */ = {isa = PBXBuildFile; fileRef = 8AC871BF1D957A5400CB5288 /* RLFile.h */; };
+		8AC871C11D957A5400CB5288 /* RLFile.h in Headers */ = {isa = PBXBuildFile; fileRef = 8AC871BF1D957A5400CB5288 /* RLFile.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8AC871C21D957A5400CB5288 /* RLFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AC871C01D957A5400CB5288 /* RLFile.m */; };
 		8AC871C41D957F2000CB5288 /* RLDirectoryCleanerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AC871C31D957F2000CB5288 /* RLDirectoryCleanerTests.m */; };
 		8AC871C61D95AE0100CB5288 /* RLHttpRemoteLoggerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AC871C51D95AE0100CB5288 /* RLHttpRemoteLoggerTests.m */; };
-		8AC871C91D95AE3E00CB5288 /* RLDirectory.h in Headers */ = {isa = PBXBuildFile; fileRef = 8AC871C71D95AE3E00CB5288 /* RLDirectory.h */; };
+		8AC871C91D95AE3E00CB5288 /* RLDirectory.h in Headers */ = {isa = PBXBuildFile; fileRef = 8AC871C71D95AE3E00CB5288 /* RLDirectory.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8AC871CA1D95AE3E00CB5288 /* RLDirectory.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AC871C81D95AE3E00CB5288 /* RLDirectory.m */; };
 /* End PBXBuildFile section */
 
@@ -153,12 +154,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				8AC871A51D92F3A800CB5288 /* RLHttpRemoteLogger.h in Headers */,
+				8A97D51F1D95D7430001B3EA /* RLIRemoteLogger.h in Headers */,
 				8AC871BD1D956DD900CB5288 /* RLDirectoryCleaner.h in Headers */,
 				8AC871B71D95243800CB5288 /* RLHttpUploader.h in Headers */,
-				8AC871C11D957A5400CB5288 /* RLFile.h in Headers */,
 				8AC871A91D92F43600CB5288 /* RLMemoryBuffer.h in Headers */,
 				8AC871B11D92FCA500CB5288 /* RLCurrentFile.h in Headers */,
 				8AC871C91D95AE3E00CB5288 /* RLDirectory.h in Headers */,
+				8AC871C11D957A5400CB5288 /* RLFile.h in Headers */,
 				8A4907FA1D92EBF300B56998 /* RemoteLogger.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
