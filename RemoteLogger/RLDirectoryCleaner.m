@@ -32,26 +32,33 @@
 
 - (void)checkDirectorySize {
     NSArray<NSString *> *files = [self getSortedFiles];
+    if(files.count == 0) {
+        return;
+    }
 
     long sum = 0;
-    for (int64_t i = files.count - 1; i >= 0; --i) {
+    for (int64_t i = files.count - 1; i >= 0 ; --i) {
         NSString * filepath = files[(NSUInteger) i];
         RLFile * file = [[RLFile alloc] initWithPath:filepath manager:_fileManager];
 
         sum += file.fileLength;
 
         if(sum > _directorySize) {
-            [file deleteFile];
+            [file deleteFile:@" directory size"];
         }
     }
 }
 
 - (void)checkFilesCount {
     NSArray<NSString *> *files = [self getSortedFiles];
-    int64_t deletesCount = files.count - _filesCount;
+    if(files.count == 0) {
+        return;
+    }
+
+    int64_t deletesCount = (int64_t)files.count - _filesCount;
     for (int32_t i = 0; i < deletesCount && i < files.count; i++) {
         RLFile * file = [[RLFile alloc] initWithPath:files[(NSUInteger) i] manager:_fileManager];
-        [file deleteFile];
+        [file deleteFile:@"files count"];
     }
 }
 

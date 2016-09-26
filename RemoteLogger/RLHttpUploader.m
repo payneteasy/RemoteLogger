@@ -44,7 +44,7 @@
 
 - (void)uploadFiles {
     NSArray<NSString *> *files = _directoryCleaner.getSortedFiles;
-    NSLog(@"%@ files to be uploaded", @(files.count));
+    NSLog(@"RL-INFO %@ files to be uploaded", @(files.count));
     for(NSString * file in files) {
         [self uploadFile:file];
     }
@@ -52,11 +52,18 @@
 
 - (void)uploadFile:(NSString *)aFilepath {
 
+    RLFile * file = [[RLFile alloc] initWithPath:aFilepath manager:_fileManager];
+    uint64_t fileSize = file.fileLength;
+    if(fileSize <= 0 ) {
+        [file deleteFile:@"file size is 0 (wasn't uploaded)"];
+        return;
+    }
+
     NSURLRequest      * request = [self createHttpRequest:aFilepath];
     NSHTTPURLResponse * response;
     NSError           * error;
 
-    NSLog(@"RL-INFO Sending %@ to %@", aFilepath.lastPathComponent, _uploadUrl);
+    NSLog(@"RL-INFO Sending %@ bytes from %@ to %@", @(fileSize), aFilepath.lastPathComponent, _uploadUrl);
 
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wdeprecated-declarations"
@@ -75,8 +82,7 @@
         return;
     }
 
-    RLFile * file = [[RLFile alloc] initWithPath:aFilepath manager:_fileManager];
-    [file deleteFile];
+    [file deleteFile:@"uploaded to server"];
 }
 
 - (NSURLRequest *)createHttpRequest:(NSString *)aFilepath {

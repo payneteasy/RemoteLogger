@@ -42,7 +42,7 @@
         RLFile * file = [[RLFile alloc]
                 initWithPath:[_directory.path stringByAppendingPathComponent:filename]
                      manager:_fileManager];
-        [file deleteFile];
+        [file deleteFile:@"remote previous files"];
     }
 
     // creates test files

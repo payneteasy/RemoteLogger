@@ -67,8 +67,9 @@
 }
 
 - (NSURL *)createNewActiveFile {
-    NSString * name = [NSString stringWithFormat:@"%@-current", @([[NSDate date] timeIntervalSince1970])];
-    return [[NSURL alloc] initFileURLWithPath:name relativeToURL:_directory];
+    NSString * filename = [NSString stringWithFormat:@"%@-current", @([[NSDate date] timeIntervalSince1970])];
+    NSString * path     = [_directory.path stringByAppendingPathComponent:filename];
+    return [[NSURL alloc] initFileURLWithPath:path];
 }
 
 - (void)write:(NSData *)aData {

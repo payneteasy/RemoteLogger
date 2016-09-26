@@ -11,6 +11,15 @@
 		8A4907F81D92EBF300B56998 /* RemoteLoggerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A4907F71D92EBF300B56998 /* RemoteLoggerTests.m */; };
 		8A4907FA1D92EBF300B56998 /* RemoteLogger.h in Headers */ = {isa = PBXBuildFile; fileRef = 8A4907EC1D92EBF300B56998 /* RemoteLogger.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8A97D51F1D95D7430001B3EA /* RLIRemoteLogger.h in Headers */ = {isa = PBXBuildFile; fileRef = 8AC871A21D92F26500CB5288 /* RLIRemoteLogger.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8AC16EC11D9918A70031E885 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AC16EC01D9918A70031E885 /* main.m */; };
+		8AC16EC41D9918A70031E885 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AC16EC31D9918A70031E885 /* AppDelegate.m */; };
+		8AC16EC71D9918A70031E885 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AC16EC61D9918A70031E885 /* ViewController.m */; };
+		8AC16ECA1D9918A70031E885 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8AC16EC81D9918A70031E885 /* Main.storyboard */; };
+		8AC16ECC1D9918A70031E885 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8AC16ECB1D9918A70031E885 /* Assets.xcassets */; };
+		8AC16ECF1D9918A70031E885 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8AC16ECD1D9918A70031E885 /* LaunchScreen.storyboard */; };
+		8AC16ED61D9919470031E885 /* RemoteLogging.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AC16ED51D9919470031E885 /* RemoteLogging.m */; };
+		8AC16ED71D9919A90031E885 /* RemoteLogger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A4907E91D92EBF300B56998 /* RemoteLogger.framework */; };
+		8AC16ED81D9919A90031E885 /* RemoteLogger.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8A4907E91D92EBF300B56998 /* RemoteLogger.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		8AC871A51D92F3A800CB5288 /* RLHttpRemoteLogger.h in Headers */ = {isa = PBXBuildFile; fileRef = 8AC871A31D92F3A800CB5288 /* RLHttpRemoteLogger.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8AC871A61D92F3A800CB5288 /* RLHttpRemoteLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AC871A41D92F3A800CB5288 /* RLHttpRemoteLogger.m */; };
 		8AC871A91D92F43600CB5288 /* RLMemoryBuffer.h in Headers */ = {isa = PBXBuildFile; fileRef = 8AC871A71D92F43600CB5288 /* RLMemoryBuffer.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -40,7 +49,28 @@
 			remoteGlobalIDString = 8A4907E81D92EBF300B56998;
 			remoteInfo = RemoteLogger;
 		};
+		8AC16ED91D9919A90031E885 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8A4907E01D92EBF300B56998 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8A4907E81D92EBF300B56998;
+			remoteInfo = RemoteLogger;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		8AC16EDB1D9919AA0031E885 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				8AC16ED81D9919A90031E885 /* RemoteLogger.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		8A4907E91D92EBF300B56998 /* RemoteLogger.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RemoteLogger.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -49,6 +79,18 @@
 		8A4907F21D92EBF300B56998 /* RemoteLoggerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RemoteLoggerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A4907F71D92EBF300B56998 /* RemoteLoggerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RemoteLoggerTests.m; sourceTree = "<group>"; };
 		8A4907F91D92EBF300B56998 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8AC16EBD1D9918A70031E885 /* SampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8AC16EC01D9918A70031E885 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		8AC16EC21D9918A70031E885 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		8AC16EC31D9918A70031E885 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		8AC16EC51D9918A70031E885 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		8AC16EC61D9918A70031E885 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		8AC16EC91D9918A70031E885 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8AC16ECB1D9918A70031E885 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8AC16ECE1D9918A70031E885 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8AC16ED01D9918A70031E885 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8AC16ED41D9919470031E885 /* RemoteLogging.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RemoteLogging.h; sourceTree = "<group>"; };
+		8AC16ED51D9919470031E885 /* RemoteLogging.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RemoteLogging.m; sourceTree = "<group>"; };
 		8AC871A21D92F26500CB5288 /* RLIRemoteLogger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RLIRemoteLogger.h; sourceTree = "<group>"; };
 		8AC871A31D92F3A800CB5288 /* RLHttpRemoteLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RLHttpRemoteLogger.h; sourceTree = "<group>"; };
 		8AC871A41D92F3A800CB5288 /* RLHttpRemoteLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RLHttpRemoteLogger.m; sourceTree = "<group>"; };
@@ -87,6 +129,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		8AC16EBA1D9918A70031E885 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8AC16ED71D9919A90031E885 /* RemoteLogger.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -95,6 +145,7 @@
 			children = (
 				8A4907EB1D92EBF300B56998 /* RemoteLogger */,
 				8A4907F61D92EBF300B56998 /* RemoteLoggerTests */,
+				8AC16EBE1D9918A70031E885 /* SampleApp */,
 				8A4907EA1D92EBF300B56998 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -104,6 +155,7 @@
 			children = (
 				8A4907E91D92EBF300B56998 /* RemoteLogger.framework */,
 				8A4907F21D92EBF300B56998 /* RemoteLoggerTests.xctest */,
+				8AC16EBD1D9918A70031E885 /* SampleApp.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -144,6 +196,32 @@
 				8AC871C51D95AE0100CB5288 /* RLHttpRemoteLoggerTests.m */,
 			);
 			path = RemoteLoggerTests;
+			sourceTree = "<group>";
+		};
+		8AC16EBE1D9918A70031E885 /* SampleApp */ = {
+			isa = PBXGroup;
+			children = (
+				8AC16EC21D9918A70031E885 /* AppDelegate.h */,
+				8AC16EC31D9918A70031E885 /* AppDelegate.m */,
+				8AC16EC51D9918A70031E885 /* ViewController.h */,
+				8AC16EC61D9918A70031E885 /* ViewController.m */,
+				8AC16EC81D9918A70031E885 /* Main.storyboard */,
+				8AC16ECB1D9918A70031E885 /* Assets.xcassets */,
+				8AC16ECD1D9918A70031E885 /* LaunchScreen.storyboard */,
+				8AC16ED01D9918A70031E885 /* Info.plist */,
+				8AC16EBF1D9918A70031E885 /* Supporting Files */,
+				8AC16ED41D9919470031E885 /* RemoteLogging.h */,
+				8AC16ED51D9919470031E885 /* RemoteLogging.m */,
+			);
+			path = SampleApp;
+			sourceTree = "<group>";
+		};
+		8AC16EBF1D9918A70031E885 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8AC16EC01D9918A70031E885 /* main.m */,
+			);
+			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -204,6 +282,25 @@
 			productReference = 8A4907F21D92EBF300B56998 /* RemoteLoggerTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		8AC16EBC1D9918A70031E885 /* SampleApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8AC16ED11D9918A70031E885 /* Build configuration list for PBXNativeTarget "SampleApp" */;
+			buildPhases = (
+				8AC16EB91D9918A70031E885 /* Sources */,
+				8AC16EBA1D9918A70031E885 /* Frameworks */,
+				8AC16EBB1D9918A70031E885 /* Resources */,
+				8AC16EDB1D9919AA0031E885 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8AC16EDA1D9919A90031E885 /* PBXTargetDependency */,
+			);
+			name = SampleApp;
+			productName = SampleApp;
+			productReference = 8AC16EBD1D9918A70031E885 /* SampleApp.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -215,10 +312,17 @@
 				TargetAttributes = {
 					8A4907E81D92EBF300B56998 = {
 						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = QE2M7G5E22;
 						ProvisioningStyle = Automatic;
 					};
 					8A4907F11D92EBF300B56998 = {
 						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = QE2M7G5E22;
+						ProvisioningStyle = Automatic;
+					};
+					8AC16EBC1D9918A70031E885 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = QE2M7G5E22;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -229,6 +333,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = 8A4907DF1D92EBF300B56998;
 			productRefGroup = 8A4907EA1D92EBF300B56998 /* Products */;
@@ -237,6 +342,7 @@
 			targets = (
 				8A4907E81D92EBF300B56998 /* RemoteLogger */,
 				8A4907F11D92EBF300B56998 /* RemoteLoggerTests */,
+				8AC16EBC1D9918A70031E885 /* SampleApp */,
 			);
 		};
 /* End PBXProject section */
@@ -253,6 +359,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8AC16EBB1D9918A70031E885 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8AC16ECF1D9918A70031E885 /* LaunchScreen.storyboard in Resources */,
+				8AC16ECC1D9918A70031E885 /* Assets.xcassets in Resources */,
+				8AC16ECA1D9918A70031E885 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,6 +402,17 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		8AC16EB91D9918A70031E885 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8AC16EC71D9918A70031E885 /* ViewController.m in Sources */,
+				8AC16ED61D9919470031E885 /* RemoteLogging.m in Sources */,
+				8AC16EC41D9918A70031E885 /* AppDelegate.m in Sources */,
+				8AC16EC11D9918A70031E885 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -294,7 +421,31 @@
 			target = 8A4907E81D92EBF300B56998 /* RemoteLogger */;
 			targetProxy = 8A4907F41D92EBF300B56998 /* PBXContainerItemProxy */;
 		};
+		8AC16EDA1D9919A90031E885 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8A4907E81D92EBF300B56998 /* RemoteLogger */;
+			targetProxy = 8AC16ED91D9919A90031E885 /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		8AC16EC81D9918A70031E885 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8AC16EC91D9918A70031E885 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		8AC16ECD1D9918A70031E885 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8AC16ECE1D9918A70031E885 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		8A4907FB1D92EBF300B56998 /* Debug */ = {
@@ -398,6 +549,7 @@
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = QE2M7G5E22;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -416,6 +568,7 @@
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = QE2M7G5E22;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -432,6 +585,7 @@
 		8A4908011D92EBF300B56998 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				DEVELOPMENT_TEAM = QE2M7G5E22;
 				INFOPLIST_FILE = RemoteLoggerTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.payneteasy.RemoteLoggerTests;
@@ -442,9 +596,36 @@
 		8A4908021D92EBF300B56998 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				DEVELOPMENT_TEAM = QE2M7G5E22;
 				INFOPLIST_FILE = RemoteLoggerTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.payneteasy.RemoteLoggerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		8AC16ED21D9918A70031E885 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = QE2M7G5E22;
+				INFOPLIST_FILE = SampleApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.payneteasy.remotelogger.SampleApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		8AC16ED31D9918A70031E885 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = QE2M7G5E22;
+				INFOPLIST_FILE = SampleApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.payneteasy.remotelogger.SampleApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -478,6 +659,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		8AC16ED11D9918A70031E885 /* Build configuration list for PBXNativeTarget "SampleApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8AC16ED21D9918A70031E885 /* Debug */,
+				8AC16ED31D9918A70031E885 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};

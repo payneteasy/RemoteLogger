@@ -23,8 +23,8 @@
     return self;
 }
 
--(void) deleteFile {
-    NSLog(@"RL-INFO Deleting file: %@", _path.lastPathComponent);
+-(void) deleteFile:(NSString *)aReason {
+    NSLog(@"RL-INFO Deleting file: %@ because %@", _path.lastPathComponent, aReason);
     NSError * error;
     [_manager removeItemAtPath:_path error:&error];
     if(error){

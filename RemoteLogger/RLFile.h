@@ -12,7 +12,7 @@
 
 - (instancetype)initWithPath:(NSString *)aPath manager:(NSFileManager *)aManager;
 
-- (void)deleteFile;
+- (void)deleteFile:(NSString *)aReason;
 
 - (uint64_t)fileLength;
 @end
