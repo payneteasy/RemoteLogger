@@ -58,21 +58,20 @@
 - (void)send:(NSString *)aMessage {
     NSData * data = [aMessage dataUsingEncoding:NSUTF8StringEncoding];
 
-    __weak RLHttpRemoteLogger * wself = self;
     dispatch_async(_fileQueue, ^{
 
-        if([wself.memoryBuffer hasSpaceFor:data.length]) {
-            [wself.memoryBuffer append:data];
+        if([self.memoryBuffer hasSpaceFor:data.length]) {
+            [self.memoryBuffer append:data];
         } else {
-            [wself.memoryBuffer clearToFile:wself.currentFile];
-            [wself.memoryBuffer append:data];
+            [self.memoryBuffer clearToFile:self.currentFile];
+            [self.memoryBuffer append:data];
 
-            if(wself.currentFile.isLarge) {
-                [wself.currentFile closeAndCreateNew];
+            if(self.currentFile.isLarge) {
+                [self.currentFile closeAndCreateNew];
 
-                dispatch_async(wself.uploadQueue, ^{
-                    [wself.httpUploader removeOldFiles];
-                    [wself.httpUploader uploadFiles];
+                dispatch_async(self.uploadQueue, ^{
+                    [self.httpUploader removeOldFiles];
+                    [self.httpUploader uploadFiles];
                 });
             }
         }
@@ -82,17 +81,16 @@
 - (void)mark {
     NSLog(@"RL-INFO Mark");
 
-    __weak RLHttpRemoteLogger * wself = self;
     dispatch_async(_fileQueue, ^{
         NSLog(@"RL-INFO Clear to file");
 
-        [wself.memoryBuffer clearToFile:wself.currentFile];
-        [wself.currentFile closeAndCreateNew];
+        [self.memoryBuffer clearToFile:self.currentFile];
+        [self.currentFile closeAndCreateNew];
 
-        dispatch_async(wself.uploadQueue, ^{
-            [wself.httpUploader removeOldFiles];
+        dispatch_async(self.uploadQueue, ^{
+            [self.httpUploader removeOldFiles];
             NSLog(@"RL-INFO Uploading files ...");
-            [wself.httpUploader uploadFiles];
+            [self.httpUploader uploadFiles];
         });
     });
 }
