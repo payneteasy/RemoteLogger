@@ -4,7 +4,16 @@
 
 RemoteLogger is an Objective-C library which helps you to send logs to your HTTPS server.
 
-It firstly saves log lines to a memory buffer, then to a file and then sends to a http server.
+When we start to develop new application it is always requiring us to send debug messages to a server.
+We should deal with the remote logging.
+When we collect the debug messages we should always thinking about resource constraints.
+
+Previously we had a bad experience using an UDP transfer.
+It's unbelievable to always have all log messages on a server via UDP transfer,
+so we came up with an HTTPS transfer.
+
+Introducing RemoteLogger library.
+It firstly saves debug messages to a memory buffer, then stores to a file and then sends them to an HTTPs server.
 
 ## Features
 
@@ -26,10 +35,11 @@ or
     github "RemoteLogging/BerTlv"  "0.1.0"
 
 ## How to use it
-    
-You can create DLog macros and use it to send all logs to your http server.
- 
-For example
+
+Please see SampleApp in this project to find out the best way to use the library.
+https://github.com/payneteasy/RemoteLogger/tree/master/SampleApp
+
+The code below shows principles. 
 
 ```obj-c
 # define DLog(fmt, ...) [RemoteLogging send:__PRETTY_FUNCTION__ line:__LINE__ originalFormat:fmt , ##__VA_ARGS__];
