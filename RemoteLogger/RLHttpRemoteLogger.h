@@ -11,6 +11,8 @@
 
 @interface RLHttpRemoteLogger : NSObject<RLIRemoteLogger>
 
++(NSString *) loggerVersion;
+
 - (instancetype)initWithDirectory:(NSString *)aDirectory
                         uploadUrl:(NSString *)aUploadUrl
                       accessToken:(NSString *)aAccessToken
