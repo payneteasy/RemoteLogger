@@ -75,7 +75,6 @@
 /* Begin PBXFileReference section */
 		8A4907E91D92EBF300B56998 /* RemoteLogger.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RemoteLogger.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A4907EC1D92EBF300B56998 /* RemoteLogger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RemoteLogger.h; sourceTree = "<group>"; };
-		8A4907ED1D92EBF300B56998 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8A4907F21D92EBF300B56998 /* RemoteLoggerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RemoteLoggerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A4907F71D92EBF300B56998 /* RemoteLoggerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RemoteLoggerTests.m; sourceTree = "<group>"; };
 		8A4907F91D92EBF300B56998 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -164,7 +163,6 @@
 			isa = PBXGroup;
 			children = (
 				8A4907EC1D92EBF300B56998 /* RemoteLogger.h */,
-				8A4907ED1D92EBF300B56998 /* Info.plist */,
 				8AC871A21D92F26500CB5288 /* RLIRemoteLogger.h */,
 				8AC871A31D92F3A800CB5288 /* RLHttpRemoteLogger.h */,
 				8AC871A41D92F3A800CB5288 /* RLHttpRemoteLogger.m */,
@@ -553,7 +551,6 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = RemoteLogger/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -572,7 +569,6 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = RemoteLogger/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
