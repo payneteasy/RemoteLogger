@@ -1,7 +1,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'RemoteLogger'
-  s.version          = '0.1.4'
+  s.version          = '0.1.5'
   s.summary          = 'Remote Logger for ios'
   s.description      = 'Send logs to HTTP server'
   s.homepage         = 'https://github.com/payneteasy/RemoteLogger'
